@@ -1,0 +1,229 @@
+local WasUIPro = loadstring(game:HttpGet("https://github.com/WasKKal/WasUI-For-Roblox/raw/refs/heads/main/WasUIPro.lua"))()
+local Uis = game:GetService("UserInputService")
+
+WasUIPro:SetDefaultTheme("Dark")
+WasUIPro:SetDefaultRainbowMode("流动")
+WasUIPro:SetLanguage("中文")
+
+local mainWindow = WasUIPro:CreateWindow({
+    Title = "👑 FFlag json复制器",
+    WelcomeText = "点击按钮复制代码",
+    MinimizedText = "Copy",
+    Theme = "Dark",
+    RainbowMode = "流动",
+    DialogTitle = "确认关闭窗口",
+    GroupText = "加入交流群",
+    GroupCopy = "123456789",
+    SnowEnabled = false,
+    Folder = "CodeCopier_Config",
+    TitleTag = {
+        { text = "COPY", backgroundColor = Color3.fromRGB(0, 170, 255), textColor = Color3.fromRGB(255,255,255) }
+    },
+    FeatureNameColor = {Color3.fromRGB(0, 170, 255), Color3.fromRGB(255, 140, 0)}
+})
+
+-- 选项卡
+local copyTab = mainWindow:Tab({ Title = "复制代码" })
+local copyCategory = copyTab:Category({ Title = "快速复制", IconName = "clipboard" })
+
+-- 按钮1：复制 FFlag JSON
+copyCategory:Button({
+    Text = "复制 FFlag json Reduce ping",
+    Icon = "copy",
+    Tooltip = "将FFlag json Reduce ping复制到剪贴板",
+    Callback = function()
+        local success, errorMsg = pcall(function()
+            setclipboard([[
+{
+    "DFFlagBrowserTrackerIdTelemetryEnabled": "False",
+    "DFFlagPreloadAsyncSupportTexturePack": "True",
+    "DFFlagTextureQualityOverrideEnabled": "True",
+    "DFFlagVideoCaptureServiceEnabled": "False",
+    "DFFlagSampleAndRefreshRakPing": "True",
+    "DFFlagRakNetUseSlidingWindow4": "True",
+    "DFFlagCoreScriptTelemetry2": "False",
+    "DFFlagEnableSoundPreloading": "True",
+    "DFFlagOptimizePartsInPart": "True",
+    "DFFlagDisableDPIScale": "True",
+    "DFFlagDebugPerfMode": "True",
+    "DFIntRaknetBandwidthInfluxHundredthsPercentageV2": "10000",
+    "DFIntRakNetClockDriftAdjustmentPerPingMillisecond": "100",
+    "DFIntPerformanceControlTextureQualityBestUtility": "-1",
+    "DFIntSignalRHubConnectionHeartbeatTimerRateMs": "1000",
+    "DFIntMaxReceiveToDeserializeLatencyMilliseconds": "15",
+    "DFIntMegaReplicatorNetworkQualityProcessorUnit": "10",
+    "DFIntNetworkInDeserializeLimitGameplayMsClient": "6",
+    "DFIntSignalRHubConnectionBaseRetryTimeMs": "100",
+    "DFIntClientPacketHealthyAllocationPercent": "20",
+    "DFIntTelemetryProfilerHundredthsPercentage": "0",
+    "DFIntMaxWaitTimeBeforeForcePacketProcessMS": "1",
+    "DFIntNetworkInProcessLimitGameplayMsClient": "6",
+    "DFIntAnimationLodFacsVisibilityDenominator": "0",
+    "DFIntRaknetBandwidthPingSendEveryXSeconds": "1",
+    "DFIntSignalRCoreKeepAlivePingPeriodMs": "250",
+    "DFIntClientPacketMaxFrameMicroseconds": "200",
+    "DFIntSoundServiceCacheCleanupMaxAgeDays": "2",
+    "DFIntMaxProcessPacketsStepsPerCyclic": "5000",
+    "DFIntClientPacketExcessMicroseconds": "1000",
+    "DFIntMaxProcessPacketsStepsAccumulated": "0",
+    "DFIntWaitOnUpdateNetworkLoopEndedMS": "100",
+    "DFIntLargePacketQueueSizeCutoffMB": "1000",
+    "DFIntMaxProcessPacketsJobScaling": "10000",
+    "DFIntRakNetNakResendDelayRttPercent": "50",
+    "DFIntSignalRCoreServerTimeoutMs": "11100",
+    "DFIntDebugFRMQualityLevelOverride": "1",
+    "DFIntClientPacketMinMicroseconds": "1",
+    "DFIntAnimationLodFacsDistanceMin": "0",
+    "DFIntAnimationLodFacsDistanceMax": "0",
+    "DFIntWaitOnRecvFromLoopEndedMS": "100",
+    "DFIntRakNetNakResendDelayMsMax": "100",
+    "DFIntCodecMaxOutgoingFrames": "10000",
+    "DFIntSignalRCoreRpcQueueSize": "256",
+    "DFIntRakNetMinAckGrowthPercent": "0",
+    "DFIntTaskSchedulerTargetFps": "9999",
+    "DFIntCodecMaxIncomingPackets": "100",
+    "DFIntRakNetMtuValue3InBytes": "1200",
+    "DFIntRakNetMtuValue1InBytes": "1280",
+    "DFIntRakNetMtuValue2InBytes": "1240",
+    "DFIntRakNetNakResendDelayMs": "10",
+    "DFIntRakNetResendRttMultiple": "1",
+    "DFIntMemCacheMaxCapacityMB": "48",
+    "DFIntClientPacketMaxDelayMs": "11",
+    "DFIntTextureQualityOverride": "0",
+    "DFIntRakNetSelectTimeoutMs": "1",
+    "DFIntSignalRCoreTimerMs": "750",
+    "DFIntConnectionMTUSize": "1260",
+    "DFIntMaxFrameBufferSize": "4",
+    "DFIntRakNetLoopMs": "1",
+    "DFIntDebugDynamicRenderKiloPixels": "1100",
+    "DFIntDebugRestrictGCDistance": "1",
+    "FIntTaskSchedulerAsyncTasksMinimumThreadCount": "2",
+    "FIntRenderMaxShadowAtlasUsageBeforeDownscale": "80",
+    "FIntPerformanceTelemetryQueueProcessLimit": "0",
+    "FIntRenderShadowMapDepthCacheMemLimit": "192",
+    "FIntUITextureMaxRenderTextureSize": "1024",
+    "FIntRakNetResendBufferArrayLength": "128",
+    "FIntTaskSchedulerAutoThreadLimit": "6",
+    "FIntTerrainOTAMaxTextureSize": "1024",
+    "FIntOcclusionWorkerThreadCount": "5",
+    "FIntTaskSchedulerMaxNumOfJobs": "86",
+    "FIntTelemetryProfilerFrequency": "0",
+    "FIntRenderLocalLightFadeInMs": "0",
+    "FIntDefaultMeshCacheSizeMB": "256",
+    "FIntReportDeviceInfoRollout": "0",
+    "FIntTaskSchedulerThreadMin": "1",
+    "FIntRobloxGuiBlurIntensity": "0",
+    "FIntTerrainArraySliceSize": "0",
+    "FIntDebugForceMSAASamples": "1",
+    "FIntRenderShadowmapBias": "0",
+    "FIntFRMMaxGrassDistance": "0",
+    "FIntFRMMinGrassDistance": "0",
+    "FIntGrassMovementReducedMotionFactor": "0",
+    "FIntDebugTextureManagerSkipMips": "7",
+    "RenderUseTextureManager224": "False",
+    "TextureQualityOverride": "1",
+    "TextureQualityOverrideEnabled": "True",
+    "PerformanceControlTextureQualityBestUtility": "1",
+    "FFlagRenderAllocateShadowMapResourcesOnDemand": "True",
+    "FFlagSpecifyNetworkReplicatorScopeForItems": "True",
+    "FFlagTaskSchedulerLimitTargetFpsTo2402": "False",
+    "FFlagHandleAltEnterFullscreenManually": "False",
+    "FFlagGameBasicSettingsFramerateCap5": "False",
+    "FFlagSpecifyNetworkReplicatorScope": "True",
+    "FFlagSendRenderFidelityTelemetry2": "False",
+    "FFlagRenderGpuTextureCompressor": "True",
+    "FFlagBaseThreadPoolUseRuntime2": "True",
+    "FFlagCacheTextBoundsInGuiText": "True",
+    "FFlagEnableTelemetryService1": "False",
+    "FFlagDebugGraphicsPreferD3D11": "True",
+    "FFlagPerfDataOnTelemetryV2": "False",
+    "FFlagOpenTelemetryEnabled2": "False",
+    "FFlagRbxStorageUseMemCache": "True",
+    "FFlagDebugForceGenerateHSR": "True",
+    "FFlagRenderInitShadowmaps": "True",
+    "FFlagFastGPULightCulling3": "True",
+    "FFlagDebugSkyGray": "True",
+    "FFlagDebugRenderingSetDeterministic": "True",
+    "FLogNetwork": "7"
+}
+]])
+        end)
+        if success then
+            WasUIPro:Notify({
+                Title = "✅ 已复制!",
+                Content = "已将FFlag json Reduce ping 复制到剪贴板",
+                Duration = 2
+            })
+        else
+            WasUIPro:Notify({
+                Title = "❌ 复制失败",
+                Content = "错误: "..tostring(errorMsg),
+                Duration = 3
+            })
+            warn("复制失败: " .. tostring(errorMsg))
+        end
+    end
+})
+
+-- 按钮2：复制图形优化配置
+copyCategory:Button({
+    Text = "复制 FFlag Unlock fps json",
+    Icon = "copy",
+    Tooltip = "将FFlag Unlock fps json复制到剪贴板",
+    Callback = function()
+        local success, errorMsg = pcall(function()
+            setclipboard([[
+{
+    "DFIntDebugDynamicRenderKiloPixels": 33177,
+    "FIntDebugForceMSAASamples": "8",
+    "DFIntTaskSchedulerTargetFps": "99999999",
+    "FFlagDebugDisplayFPS": "True",
+    "FFlagDebugGraphicsDisableDirect3D11": "True",
+    "FFlagDebugGraphicsPreferVulkan": "True",
+    "DFFlagDebugPauseVoxelizer": "True",
+    "FIntRenderShadowIntensity": "0",
+    "FIntRenderShadowmapBias": "-1",
+    "FFlagDisablePostFx": "True",
+    "FIntFRMMaxGrassDistance": "0",
+    "FIntRenderGrassDetailStrands": "0",
+    "FIntFRMMinGrassDistance": "0",
+    "FFlagDebugSkyGray": "True",
+    "DFFlagTextureQualityOverrideEnabled": "True",
+    "DFIntTextureQualityOverride": "1"
+}
+]])
+        end)
+        if success then
+            WasUIPro:Notify({
+                Title = "✅ 已复制!",
+                Content = "已将FFlag Unlock fps json  复制到剪贴板",
+                Duration = 2
+            })
+        else
+            WasUIPro:Notify({
+                Title = "❌ 复制失败",
+                Content = "错误: "..tostring(errorMsg),
+                Duration = 3
+            })
+            warn("复制失败: " .. tostring(errorMsg))
+        end
+    end
+})
+
+copyTab:Paragraph({
+    Title = "使用说明",
+    Desc = "点击上方按钮复制对应配置，按F1可以显示/隐藏UI窗口",
+    Icon = "info"
+})
+
+-- F1快捷键显示/隐藏窗口
+local isVisible = true
+Uis.InputBegan:Connect(function(input, processed)
+    if processed then return end
+    if input.KeyCode == Enum.KeyCode.F1 then
+        isVisible = not isVisible
+        mainWindow:SetVisible(isVisible)
+    end
+end)
+
+WasUIPro:Notify({ Title = "🚀 FFlag json复制器", Content = "UI已就绪，F1隐藏窗口", Duration = 3 })
